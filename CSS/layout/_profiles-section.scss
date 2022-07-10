@@ -1,0 +1,55 @@
+@use '../abstracts/mixins' as *;
+
+#experts{
+    padding: 8vw 8vw 6vw 8vw;
+    text-align: center;
+
+
+    .expert-box{
+        @include grid-layout(repeat(auto-fit, minmax(250px, 1fr)));
+   
+
+
+        .profile{
+            background-color: var(--clr-article-100);
+            padding: 30px 10px;
+            @include card-shadow;
+         
+
+            .expert-image{
+                width: 12rem;
+                height: 12rem;    
+                border-radius: 50%;
+                position: relative;
+                top: 32%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                img{
+                    width: 12rem;
+                    height: 12rem;    
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+
+            }
+        }
+    }
+}
+.pro-links{
+    margin-top: 10px;
+
+    i{
+        padding: 10px 13px;
+        border: 1px solid var(--clr-primary-600);
+        cursor: pointer;
+        @include transition;
+
+        &:hover{
+            background-color: var(--clr-primary-600);
+            color: var(--clr-secondary-100);
+            border: 1px solid var(--clr-primary-600);
+            cursor: pointer;
+        }
+    }
+}

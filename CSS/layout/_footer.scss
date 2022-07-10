@@ -1,0 +1,112 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/media-query' as *;
+
+footer{
+    padding: 8vw;
+    background-color: var(--clr-primary-600);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    .footer-col{
+        padding-bottom: 40px;
+    }
+    h3{
+        color: var(--clr-secondary-600);
+        font-weight: 600;
+        padding-bottom: 20px;
+    }
+    li{
+        list-style: none;
+        color: var(--clr-secondary-200);
+        padding: 10px 0;
+        font-size: 15px;
+        cursor: pointer;
+        @include transition;
+
+        &:hover{
+            color: var(--clr-secondary-600);
+        }
+    }
+    p{
+        color: var(--clr-secondary-200);
+    }
+    .subscribe{
+        margin-top: 20px;
+
+        a{
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 12px 15px;
+            background-color: var(--clr-secondary-100);
+            font-weight: 600;
+            @include transition(100ms);
+
+            &.yellow{
+                color: var(--clr-primary-600);
+                background-color: var(--clr-article-300);
+
+                &:hover {
+                    background-color: var(--clr-article-400);
+                }
+            }
+        }
+    }
+    input{
+        width: 220px;
+        padding: 15px 12px;
+        background: var(--clr-primary-500);
+        border: none;
+        outline: none;
+        color: var(--clr-secondary-100);
+    }
+    .copyright{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+
+        p{
+            color: var(--clr-secondary-100);
+        }
+
+        .pro-links{
+            margin-top: 0px;
+        
+            i{
+                color: var(--clr-primary-600);
+                background-color: var(--clr-secondary-200);
+                @include transition;
+
+                &:hover {
+                    background-color: var(--clr-article-300);
+                }
+            }
+        }
+    }
+
+    
+}
+
+@include small-screen{
+    .subscribe{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        input{
+            width: 100%;
+        }
+        a{
+            text-align: center;
+        }
+    }
+
+    .copyright{
+        display: flex !important;
+        flex-direction: column;
+    }
+}
