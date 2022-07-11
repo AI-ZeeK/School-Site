@@ -701,9 +701,8 @@ footer .copyright .pro-links i:hover {
   .subscribe a {
     text-align: center;
   }
-
   .copyright {
     display: flex !important;
     flex-direction: column;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
