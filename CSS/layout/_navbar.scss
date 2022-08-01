@@ -47,10 +47,25 @@
                     color: var(--clr-primary-500);
                     font-size: 1rem;
                     font-weight: 500;
+                    position: relative;
                     @include transition(100ms);
 
                     &:hover{
                         color: var(--clr-article-300);
+                    }
+                    &.active::after{
+                        content: '';
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: var(--clr-primary-500);
+                        @include transition(100ms);
+                      
+                    }
+                    &.active:hover::after{
+                        background-color: var(--clr-article-300);
                     }
                 }
             }
@@ -58,6 +73,10 @@
     }
 }
 
+
+.menu-btn-active{
+    display: none !important;
+}
 
 @include small-screen{
     .navbar{
@@ -71,7 +90,7 @@
           
       
           #menu-btn{
-              display: initial;
+              display: block;
           }
   
           #menu-close{
@@ -126,7 +145,7 @@
         
     
         #menu-btn{
-            display: initial;
+            display: block;
         }
 
         #menu-close{
