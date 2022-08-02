@@ -37,14 +37,16 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
+            gap: 1.7rem;
 
             li{
                 list-style: none;
-                margin-left: 30px;
+    
 
                 a{
                     text-decoration: none ;
                     color: var(--clr-primary-500);
+                    padding: 0 0.2rem;
                     font-size: 1rem;
                     font-weight: 500;
                     position: relative;
